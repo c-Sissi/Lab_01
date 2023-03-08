@@ -38,17 +38,33 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </HBox>
-            <TextArea fx:id="txtResult" prefHeight="200.0" prefWidth="200.0">
+            <TextArea fx:id="txtResult" disable="true" prefHeight="200.0" prefWidth="200.0">
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
             </TextArea>
-            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#doReset" text="Reset">
+            <TextArea fx:id="txtTime" disable="true" prefHeight="100.0" prefWidth="295.0">
                <VBox.margin>
-                  <Insets bottom="5.0" left="230.0" right="5.0" top="5.0" />
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </VBox.margin>
-            </Button>
+            </TextArea>
          </children>
       </VBox>
    </center>
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnCancella" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#doDelete" text="Cancella">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="160.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnReset" mnemonicParsing="false" onAction="#doReset" text="Reset">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
 </BorderPane>

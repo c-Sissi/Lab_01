@@ -28,8 +28,9 @@ public class Parole implements Comparable <Parole>{
 	
 	public void reset() {
 		listaParole.clear();
-		
-		// TODO
+	}
+	public void cancella(String p) {
+		listaParole.remove(p);
 	}
 
 	@Override
