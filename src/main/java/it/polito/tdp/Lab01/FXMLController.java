@@ -31,15 +31,23 @@ public class FXMLController {
 
     @FXML
     private TextArea txtResult;
-
+   
     @FXML
     void doInsert(ActionEvent event) {
-
+    	String s = "";
+    	elenco.addParola(txtParola.getText());
+    	for(int i = 0; i < elenco.getElenco().size(); i++) {
+    		s += elenco.getElenco().get(i)+"\n";
+    	}
+    	txtResult.setText(s);
+    	txtParola.clear();
     }
 
     @FXML
     void doReset(ActionEvent event) {
-
+    	elenco.reset();
+    	txtResult.clear();
+    	txtParola.clear();
     }
 
     @FXML
